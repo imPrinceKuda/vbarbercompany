@@ -153,15 +153,20 @@ button, input, textarea { font: inherit; }
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(circle at 50% 48%, rgba(0,0,0,.18) 0%, rgba(0,0,0,.26) 44%, rgba(0,0,0,.46) 88%),
-    linear-gradient(180deg, rgba(0,0,0,.16), rgba(0,0,0,.34));
+    radial-gradient(ellipse 68% 86% at 50% 48%,
+      rgba(0,0,0,.04) 0%,
+      rgba(0,0,0,.08) 50%,
+      rgba(0,0,0,.30) 64%,
+      rgba(0,0,0,.68) 82%,
+      rgba(0,0,0,.92) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.22));
 }
 .hero::after {
   content: '';
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.22) 78%, #050505 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.16) 78%, #050505 100%);
 }
 .hero-inner {
   position: relative;
