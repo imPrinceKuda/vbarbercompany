@@ -407,7 +407,7 @@ h2 span { color: var(--gold); }
   position: relative;
   overflow: hidden;
   padding: 100px 0;
-  background: linear-gradient(rgba(0,0,0,.66), rgba(0,0,0,.74)), url('assets/hero-neck.jpg') center/cover;
+  background: linear-gradient(rgba(0,0,0,.66), rgba(0,0,0,.74)), url('assets/hero-vista-cut.png') center/cover;
   border-top: 1px solid rgba(255,255,255,.1);
 }
 .final-inner { text-align: center; max-width: 900px; }
