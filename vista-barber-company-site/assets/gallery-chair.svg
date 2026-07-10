@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Shop Atmosphere</title>
+  <desc id="desc">Image placeholder for Vista Barber Company. Replace this SVG with a real photo using the same filename.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15110d"/>
+      <stop offset="1" stop-color="#332215"/>
+    </linearGradient>
+    <radialGradient id="r" cx="72%" cy="24%" r="55%">
+      <stop offset="0" stop-color="#d7a956" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#d7a956" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000" flood-opacity="0.36"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#g)"/>
+  <rect width="1600" height="1100" fill="url(#r)"/>
+  <g opacity="0.12" fill="none" stroke="#fff" stroke-width="2">
+    <path d="M-40 920 C240 760 420 760 660 890 S1130 1040 1660 790"/>
+    <path d="M-60 210 C250 70 550 130 770 260 S1210 460 1660 120"/>
+    <circle cx="1240" cy="240" r="210"/>
+    <circle cx="1260" cy="250" r="300"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="126" y="158" width="560" height="560" rx="42" fill="#211910" stroke="#d7a956" stroke-opacity="0.45"/>
+    <g transform="translate(260 270)" fill="none" stroke="#d7a956" stroke-linecap="round" stroke-linejoin="round" stroke-width="18">
+      <path d="M112 36 L372 356"/>
+      <path d="M372 36 L112 356"/>
+      <circle cx="84" cy="20" r="42"/>
+      <circle cx="400" cy="20" r="42"/>
+      <path d="M196 250 L285 250"/>
+    </g>
+  </g>
+  <g transform="translate(760 360)">
+    <text x="0" y="0" fill="#f7f0e7" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="900" letter-spacing="-4">Shop Atmosphere</text>
+    <text x="0" y="82" fill="#d7c6b2" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Barber chair and warm lighting</text>
+    <rect x="0" y="132" width="395" height="66" rx="33" fill="#d7a956"/>
+    <text x="32" y="176" fill="#15110d" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="900">Replace with real photo</text>
+  </g>
+</svg>
