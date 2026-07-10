@@ -1,13 +1,21 @@
 # Vista Barber Company Website
 
-A modern, high-converting static website for Vista Barber Company, ready for GitHub Pages.
+A simple, local, high-converting static website for Vista Barber Company, ready for GitHub Pages.
+
+## What changed in this version
+
+- Replaced the blank placeholder image slots with usable shop/cut photos pulled from Vista Barber Company’s public website/Instagram feed where available.
+- Changed the visual style away from rounded, sleek agency design and toward a darker old-school barber shop feel: squared buttons, heavier typography, brass/cream/oxblood colors, harder borders, and less glossy polish.
+- Added more personality based on the shop vibe: old-school music, vintage wall pieces, darker shop energy, regular local barbershop feel, while still clearly explaining the services.
+- Connected the “Book Now” buttons to the Vista appointment link found from the current public site.
+- Updated the Instagram link to `https://www.instagram.com/vistabarberco/`.
 
 ## Files
 
 - `index.html` — full website page
 - `styles.css` — responsive styling
 - `script.js` — sticky header, current year, booking link helper
-- `assets/` — favicon and image placeholders
+- `assets/` — favicon, fallback SVGs, and real image files
 
 ## How to upload to GitHub Pages
 
@@ -20,46 +28,30 @@ A modern, high-converting static website for Vista Barber Company, ready for Git
    - Folder: **/root**
 5. Save. GitHub will publish the site.
 
-## Replace placeholder images
+## Booking link
 
-Drop real business photos into the `assets` folder using these exact filenames:
-
-- `hero.jpg` — hero/background image, ideally exterior or strong shop photo
-- `gallery-1.jpg` — exterior/outside shop photo
-- `gallery-2.jpg` — interior/barbershop photo
-- `gallery-3.jpg` — haircut/fade photo
-- `gallery-4.jpg` — before-and-after cut photo
-- `gallery-5.jpg` — barber chair/shop atmosphere photo
-
-The site already includes SVG fallbacks, so it will still look polished before photos are added.
-
-## Update booking link
-
-Open `script.js` and replace:
+The booking URL is set inside `script.js`:
 
 ```js
-const BOOKING_URL = "";
+const BOOKING_URL = "https://app.acuityscheduling.com/schedule.php?owner=19633041";
 ```
 
-with the real booking link, for example:
+Replace that link if the shop changes booking platforms.
 
-```js
-const BOOKING_URL = "https://your-booking-link.com";
-```
+## Images
 
-If left blank, all “Book Now” buttons call the shop at `(760) 659-6603`.
+The current image files are already included:
 
-## Update Instagram link
+- `hero.jpg`
+- `gallery-1.jpg`
+- `gallery-2.jpg`
+- `gallery-3.jpg`
+- `gallery-4.jpg`
+- `gallery-5.jpg`
 
-In `index.html`, search for:
+To replace them later, drop new photos into `assets/` using the same filenames.
 
-```html
-https://www.instagram.com/
-```
-
-Replace it with the shop’s real Instagram URL.
-
-## Update hours
+## Hours
 
 The footer currently says “Open 7 days” and “Call the shop for current daily hours.” Replace this with exact hours when you have them.
 
@@ -76,4 +68,4 @@ The page includes local SEO copy and metadata for:
 - barber near Melrose Square
 - North County San Diego barber
 
-It also includes Barbershop schema markup with address, phone, rating, and review count.
+It also includes Barbershop schema markup with address, phone, rating, review count, service area, and Instagram link.
