@@ -161,8 +161,8 @@ h3 { font-size: 1.36rem; }
 .services-section { background: #090604; }
 .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .service-card { border: 1px solid var(--line); background: var(--panel); overflow: hidden; }
-.service-card img { width: 100%; height: 220px; display: block; object-fit: cover; filter: saturate(.92) contrast(1.05); }
-.service-copy { padding: 20px 18px 22px; min-height: 158px; }
+.service-card img { width: 100%; height: 210px; display: block; object-fit: cover; filter: saturate(.92) contrast(1.05); }
+.service-copy { padding: 18px 16px 20px; min-height: 150px; }
 .service-card h3 { margin-bottom: 12px; color: var(--white); text-shadow: 2px 2px 0 rgba(40,110,180,.55); }
 .service-card p { color: var(--muted); font-size: .98rem; }
 .center-actions { margin-top: 34px; }
@@ -225,14 +225,14 @@ h3 { font-size: 1.36rem; }
 .modal-locations p { color: var(--muted); margin-bottom: 14px; }
 .modal-locations a:not(.btn) { color: var(--white); font-weight: 900; }
 
-@media (max-width: 1100px) {
-  .service-grid { grid-template-columns: repeat(2, 1fr); }
-}
 @media (max-width: 980px) {
   .desktop-nav, .phone-link { display: none; }
   .review-grid, .location-grid { grid-template-columns: 1fr; }
   .photo-strip { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 900px) {
+  .service-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 680px) {
   :root { --header: 64px; }
