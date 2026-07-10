@@ -1,21 +1,36 @@
 # Vista Barber Company Website
 
-A simple, local, high-converting static website for Vista Barber Company, ready for GitHub Pages.
+A simple static website for Vista Barber Company, ready for GitHub Pages.
 
-## What changed in this version
+## Current direction
 
-- Replaced the blank placeholder image slots with usable shop/cut photos pulled from Vista Barber Company’s public website/Instagram feed where available.
-- Changed the visual style away from rounded, sleek agency design and toward a darker old-school barber shop feel: squared buttons, heavier typography, brass/cream/oxblood colors, harder borders, and less glossy polish.
-- Added more personality based on the shop vibe: old-school music, vintage wall pieces, darker shop energy, regular local barbershop feel, while still clearly explaining the services.
-- Connected the “Book Now” buttons to the Vista appointment link found from the current public site.
-- Updated the Instagram link to `https://www.instagram.com/vistabarberco/`.
+This version is intentionally less like an agency landing page:
+
+- Black, white, and grey color theme
+- Squared buttons and sharper layout
+- Faster first impression: headline, proof, and two booking buttons above the fold
+- Separate booking buttons for Vista and San Marcos
+- Cleaner services section with easier-to-read service blocks
+- Less clutter and fewer decorative sections
+- Still includes reviews, photos, locations, mobile sticky booking bar, SEO, and clickable calls/directions
 
 ## Files
 
 - `index.html` — full website page
 - `styles.css` — responsive styling
-- `script.js` — sticky header, current year, booking link helper
-- `assets/` — favicon, fallback SVGs, and real image files
+- `script.js` — sticky header, current year, and booking links
+- `assets/` — favicon, fallback SVGs, and image files
+
+## Booking links
+
+The two appointment URLs are set in `script.js`:
+
+```js
+const VISTA_BOOKING_URL = "https://app.acuityscheduling.com/schedule/9c201f82";
+const SAN_MARCOS_BOOKING_URL = "https://app.acuityscheduling.com/schedule/b0204b31";
+```
+
+Replace either link if the shop changes scheduling platforms.
 
 ## How to upload to GitHub Pages
 
@@ -28,19 +43,9 @@ A simple, local, high-converting static website for Vista Barber Company, ready 
    - Folder: **/root**
 5. Save. GitHub will publish the site.
 
-## Booking link
-
-The booking URL is set inside `script.js`:
-
-```js
-const BOOKING_URL = "https://app.acuityscheduling.com/schedule.php?owner=19633041";
-```
-
-Replace that link if the shop changes booking platforms.
-
 ## Images
 
-The current image files are already included:
+Current image files are included:
 
 - `hero.jpg`
 - `gallery-1.jpg`
@@ -50,10 +55,6 @@ The current image files are already included:
 - `gallery-5.jpg`
 
 To replace them later, drop new photos into `assets/` using the same filenames.
-
-## Hours
-
-The footer currently says “Open 7 days” and “Call the shop for current daily hours.” Replace this with exact hours when you have them.
 
 ## SEO included
 
@@ -66,6 +67,7 @@ The page includes local SEO copy and metadata for:
 - beard trim Vista CA
 - kids haircut Vista CA
 - barber near Melrose Square
+- San Marcos barber shop
 - North County San Diego barber
 
-It also includes Barbershop schema markup with address, phone, rating, review count, service area, and Instagram link.
+It also includes Barbershop schema markup for both locations.
