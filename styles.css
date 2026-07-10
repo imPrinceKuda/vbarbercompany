@@ -73,8 +73,9 @@ h3 { font-size: 1.36rem; }
 }
 .brand-logo {
   display: block;
-  width: clamp(142px, 14vw, 205px);
-  height: auto;
+  width: auto;
+  height: 46px;
+  max-width: 132px;
   object-fit: contain;
 }
 .desktop-nav { display: flex; gap: 32px; color: rgba(255,247,236,.68); font-weight: 800; }
@@ -119,16 +120,16 @@ h3 { font-size: 1.36rem; }
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(5,5,5,.94), rgba(5,5,5,.7) 48%, rgba(5,5,5,.94)),
-    linear-gradient(0deg, rgba(5,5,5,.95), rgba(5,5,5,.28) 42%, rgba(5,5,5,.95)),
+    linear-gradient(90deg, rgba(5,5,5,.78), rgba(5,5,5,.36) 48%, rgba(5,5,5,.78)),
+    linear-gradient(0deg, rgba(5,5,5,.82), rgba(5,5,5,.1) 42%, rgba(5,5,5,.82)),
     url("https://scontent-den2-1.cdninstagram.com/v/t51.82787-15/685406668_18171759823408845_9194775062694527569_n.jpg?_nc_cat=110&_nc_gid=7mTRu-JsDm1gfUN5oT6_vQ&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_oc=AdpnqzDBLFhBsRcHqyIFdcGouRykorFEvfvTG2qYhWSEHaRLIPQJGBEpmnhFHy1nsxk&_nc_ohc=UQlYPcMh5V0Q7kNvwFfOAS8&_nc_sid=18de74&_nc_tpa=Q5bMBQG5F9-12gyVvGW_84MfogoQqEXX7272m1aReSmu_Ei44k7Al3CmS6fuVoYfANiwU6jR_JNmuePv&_nc_zt=23&ccb=7-5&edm=ANo9K5cEAAAA&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&oe=6A561A70&oh=00_AQATaFKfIbUm-eNd80VvttuEo-EGG7EeyHNFZQosJV5Wzg&stp=dst-jpg_e35_tt6") center 36% / cover;
-  filter: saturate(.9) contrast(1.12);
+  filter: saturate(1) contrast(1.04);
 }
 .hero-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, transparent 0 35%, rgba(0,0,0,.58) 72%);
+  background: radial-gradient(circle at center, rgba(0,0,0,.04) 0 35%, rgba(0,0,0,.34) 76%);
 }
 .hero-inner { display: grid; justify-items: center; text-align: center; }
 .location-pill {
@@ -174,8 +175,15 @@ h3 { font-size: 1.36rem; }
 .review-cta h3 { margin-bottom: 20px; }
 
 .photo-strip { display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--line); background: #050505; }
-.photo-strip img { width: 100%; height: 320px; object-fit: cover; display: block; border-right: 1px solid var(--line); filter: saturate(.9) contrast(1.05); }
-.photo-strip img:last-child { border-right: 0; }
+.insta-tile { position: relative; display: block; min-height: 320px; overflow: hidden; border-right: 1px solid var(--line); color: var(--white); }
+.insta-tile:last-child { border-right: 0; }
+.insta-tile img { width: 100%; height: 320px; object-fit: cover; display: block; filter: saturate(.96) contrast(1.04); transition: transform .28s ease, filter .28s ease; }
+.insta-tile::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.68); opacity: 0; transition: opacity .2s ease; }
+.insta-caption { position: absolute; z-index: 2; inset: auto 22px 22px 22px; color: var(--white); font-weight: 850; line-height: 1.45; text-shadow: 0 2px 14px rgba(0,0,0,.7); transform: translateY(12px); opacity: 0; transition: transform .22s ease, opacity .22s ease; }
+.insta-caption::before { content: "@vistabarberco"; display: block; margin-bottom: 8px; color: var(--orange); font-size: .72rem; text-transform: uppercase; letter-spacing: .2em; }
+.insta-tile:hover img, .insta-tile:focus-visible img { transform: scale(1.04); filter: saturate(.9) contrast(1.08); }
+.insta-tile:hover::after, .insta-tile:focus-visible::after { opacity: 1; }
+.insta-tile:hover .insta-caption, .insta-tile:focus-visible .insta-caption { opacity: 1; transform: translateY(0); }
 
 .visit-section { background: #080706; }
 .location-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
@@ -240,7 +248,7 @@ h3 { font-size: 1.36rem; }
 @media (max-width: 680px) {
   :root { --header: 64px; }
   .container { width: min(100% - 28px, var(--max)); }
-  .brand-logo { width: 132px; }
+  .brand-logo { height: 40px; max-width: 116px; }
   .header-actions .btn { display: none; }
   .hero { min-height: 690px; padding-bottom: 80px; }
   h1 { font-size: clamp(3.1rem, 16vw, 5.4rem); }
@@ -253,7 +261,10 @@ h3 { font-size: 1.36rem; }
   .service-grid { grid-template-columns: repeat(2, 1fr); }
   .service-card img { height: 210px; }
   .photo-strip { grid-template-columns: 1fr; }
-  .photo-strip img { height: 280px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .insta-tile { min-height: 280px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .insta-tile img { height: 280px; }
+  .insta-tile::after, .insta-caption { opacity: 1; }
+  .insta-caption { transform: translateY(0); }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; }
   .modal-card { padding: 26px 18px; }
