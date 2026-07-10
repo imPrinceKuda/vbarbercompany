@@ -1,73 +1,58 @@
 # Vista Barber Company Website
 
-A simple static website for Vista Barber Company, ready for GitHub Pages.
+Static GitHub Pages site for Vista Barber Company.
 
-## Current direction
+## Upload to GitHub Pages
 
-This version is intentionally less like an agency landing page:
-
-- Black, white, and grey color theme
-- Squared buttons and sharper layout
-- Faster first impression: headline, proof, and two booking buttons above the fold
-- Separate booking buttons for Vista and San Marcos
-- Cleaner services section with easier-to-read service blocks
-- Less clutter and fewer decorative sections
-- Still includes reviews, photos, locations, mobile sticky booking bar, SEO, and clickable calls/directions
+1. Create a new GitHub repository.
+2. Upload everything in this folder to the repository root.
+3. Go to **Settings → Pages**.
+4. Under **Build and deployment**, choose **Deploy from a branch**.
+5. Select the `main` branch and `/root` folder.
+6. Save, then wait for GitHub Pages to publish the site.
 
 ## Files
 
-- `index.html` — full website page
-- `styles.css` — responsive styling
-- `script.js` — sticky header, current year, and booking links
-- `assets/` — favicon, fallback SVGs, and image files
+- `index.html` — site markup and SEO metadata
+- `styles.css` — layout, colors, responsive design, and modal styling
+- `script.js` — sticky header and booking popup
+- `assets/` — images and icons
 
-## Booking links
+## Booking popup
 
-The two appointment URLs are set in `script.js`:
+Any button labeled Book opens a small location chooser popup with:
 
-```js
-const VISTA_BOOKING_URL = "https://app.acuityscheduling.com/schedule/9c201f82";
-const SAN_MARCOS_BOOKING_URL = "https://app.acuityscheduling.com/schedule/b0204b31";
-```
+- Vista Barber Co Vista  
+  1688 S. Melrose Dr # 210  
+  Vista, CA 92081  
+  760-659-6603 · Open 7 days
 
-Replace either link if the shop changes scheduling platforms.
+- Vista Barber Co San Marcos  
+  1691 S. Melrose Dr # 190  
+  San Marcos, CA 92078  
+  760-290-3669 · Closed Sun & Mon
 
-## How to upload to GitHub Pages
+The actual booking links are inside the popup buttons in `index.html`.
 
-1. Create a new GitHub repository.
-2. Upload everything inside this folder to the repository root.
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, choose:
-   - Source: **Deploy from a branch**
-   - Branch: **main**
-   - Folder: **/root**
-5. Save. GitHub will publish the site.
+## Replace photos
 
-## Images
+Put new photos in `assets/`, then update image paths in `index.html`.
 
-Current image files are included:
+Recommended filenames:
 
-- `hero.jpg`
-- `gallery-1.jpg`
-- `gallery-2.jpg`
-- `gallery-3.jpg`
-- `gallery-4.jpg`
-- `gallery-5.jpg`
+- `assets/hero.jpg`
+- `assets/gallery-1.jpg`
+- `assets/gallery-2.jpg`
+- `assets/gallery-3.jpg`
+- `assets/gallery-4.jpg`
+- `assets/gallery-5.jpg`
 
-To replace them later, drop new photos into `assets/` using the same filenames.
+## Local details included
 
-## SEO included
-
-The page includes local SEO copy and metadata for:
-
-- Vista barber shop
-- barber shop in Vista CA
-- men’s haircut Vista CA
-- fades Vista CA
-- beard trim Vista CA
-- kids haircut Vista CA
-- barber near Melrose Square
-- San Marcos barber shop
-- North County San Diego barber
-
-It also includes Barbershop schema markup for both locations.
+- Vista location: 1688 S Melrose Dr #210, Vista, CA 92081
+- San Marcos location: 1691 S Melrose Dr #190, San Marcos, CA 92078
+- Vista phone: (760) 659-6603
+- San Marcos phone: (760) 290-3669
+- 4.9 Google rating
+- 146+ reviews
+- Haircuts, fades, beard trims, straight razor work, kids cuts, classic cuts
