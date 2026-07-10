@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vista Barber Company | Barber Shop in Vista, CA</title>
-  <meta name="description" content="Vista Barber Company is a professional barber shop in Vista, CA specializing in haircuts, fades, beard trims, straight razor shaves, kids cuts, and classic men’s grooming near Melrose Square." />
+  <meta name="description" content="Vista Barber Company is a local barber shop in Vista, CA offering men’s haircuts, fades, beard trims, straight razor shaves, kids cuts, and classic barber services in Melrose Square." />
   <meta name="keywords" content="Vista barber shop, barber shop in Vista CA, men’s haircut Vista CA, fades Vista CA, beard trim Vista CA, kids haircut Vista CA, barber near Melrose Square, North County San Diego barber" />
   <meta name="robots" content="index, follow" />
   <meta property="og:title" content="Vista Barber Company | Sharp Cuts. Clean Fades." />
   <meta property="og:description" content="Professional haircuts, fades, beard trims, and classic barber services in Vista, CA. Walk-ins welcome." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/hero-fallback.svg" />
-  <meta name="theme-color" content="#15110d" />
+  <meta property="og:image" content="assets/hero.jpg" />
+  <meta name="theme-color" content="#17120d" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preload" href="styles.css" as="style" />
   <link rel="stylesheet" href="styles.css" />
@@ -20,7 +20,7 @@
     "@context": "https://schema.org",
     "@type": "Barbershop",
     "name": "Vista Barber Company",
-    "image": "assets/hero-fallback.svg",
+    "image": "assets/hero.jpg",
     "telephone": "+17606596603",
     "priceRange": "$$",
     "address": {
@@ -37,8 +37,8 @@
       "reviewCount": "146"
     },
     "areaServed": ["Vista", "Shadowridge", "San Marcos", "Carlsbad", "La Costa", "North County San Diego"],
-    "url": "https://example.com",
-    "sameAs": []
+    "url": "https://vistabarberco.wixsite.com/vista-barber-co-1",
+    "sameAs": ["https://www.instagram.com/vistabarberco/"]
   }
   </script>
 </head>
@@ -57,13 +57,14 @@
 
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#services">Services</a>
+        <a href="#why-us">Why us</a>
         <a href="#reviews">Reviews</a>
-        <a href="#gallery">Gallery</a>
+        <a href="#gallery">Photos</a>
         <a href="#location">Location</a>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn-ghost" href="tel:+17606596603" aria-label="Call Vista Barber Company">Call</a>
+        <a class="btn btn-ghost" href="tel:+17606596603">Call</a>
         <a class="btn btn-primary" href="#booking" data-book-link>Book Now</a>
       </div>
     </div>
@@ -72,15 +73,17 @@
   <main id="main">
     <section class="hero" id="top" aria-label="Vista Barber Company hero">
       <div class="hero-media" aria-hidden="true">
-        <img src="assets/hero.jpg" onerror="this.onerror=null;this.src='assets/hero-fallback.svg';" alt="" />
+        <img src="assets/hero.jpg" alt="" />
       </div>
       <div class="hero-overlay"></div>
+
       <div class="container hero-content">
-        <div class="eyebrow">
+        <div class="rating-pill">
           <span class="stars" aria-label="4.9 star Google rating">★★★★★</span>
           <span>4.9 Google Rating · 146+ Reviews</span>
         </div>
 
+        <p class="hero-kicker">Local barbershop · Vista, California</p>
         <h1>Sharp Cuts. Clean Fades. Vista’s Local Barber Shop.</h1>
         <p class="hero-subhead">Professional haircuts, fades, beard trims, and classic barber services in Vista, CA. Walk-ins welcome or book your spot today.</p>
 
@@ -102,77 +105,83 @@
         <div><strong>4.9</strong><span>Google Rating</span></div>
         <div><strong>146+</strong><span>Reviews</span></div>
         <div><strong>Walk-Ins</strong><span>Welcome</span></div>
-        <div><strong>Kids</strong><span>Friendly Shop</span></div>
+        <div><strong>Kids</strong><span>Welcome</span></div>
         <div><strong>Fair</strong><span>Pricing</span></div>
         <div><strong>Central</strong><span>Vista Location</span></div>
       </div>
     </section>
 
     <section class="section intro-section">
-      <div class="container split-grid">
+      <div class="container intro-card">
         <div>
-          <p class="section-kicker">Traditional service. Modern cuts.</p>
-          <h2>A clean, comfortable local shop for the cut you actually want.</h2>
+          <p class="section-kicker">Old-school feel. Fresh cuts.</p>
+          <h2>A real local shop for quick cleanups, big changes, and everything in between.</h2>
         </div>
         <div>
-          <p>Vista Barber Company brings a traditional barbershop experience with modern flair to Melrose Square. Come in for a sharp fade, classic men’s haircut, beard cleanup, straight razor service, kids cut, or personalized styling recommendation from experienced local barbers.</p>
+          <p>Vista Barber Company keeps it straightforward: experienced barbers, clean work, easy visits, and a comfortable shop feel. Come in for a fade, a classic cut, a beard cleanup, a straight razor service, or a kids haircut without the whole overdone salon thing.</p>
+          <p>Tell your barber what you want, show a reference photo if you have one, and they’ll help dial it in for your hair type, face shape, and day-to-day styling.</p>
           <div class="inline-actions">
-            <a href="#services">View Services</a>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=Vista%20Barber%20Company%201688%20S%20Melrose%20Dr%20%23210%20Vista%2C%20CA%2092081" target="_blank" rel="noopener">Get Directions</a>
+            <a href="#services">See what they offer</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Vista%20Barber%20Company%201688%20S%20Melrose%20Dr%20%23210%20Vista%2C%20CA%2092081" target="_blank" rel="noopener">Get directions</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-muted" id="services">
+    <section class="section section-tan" id="services">
       <div class="container">
         <div class="section-heading">
           <p class="section-kicker">Services</p>
-          <h2>Haircuts, fades, shaves, and grooming done right.</h2>
-          <p>Clear services, clean results, and a shop that keeps the process simple whether you book ahead or stop in as a walk-in.</p>
+          <h2>What you can get at the shop.</h2>
+          <p>Whether you know exactly what you want or just need help looking cleaned up again, Vista Barber Company handles the staples: cuts, fades, shaves, trims, and style advice.</p>
         </div>
 
         <div class="service-grid">
           <article class="service-card">
             <span class="service-icon">✂</span>
             <h3>Haircuts</h3>
-            <p>Clean, personalized cuts shaped around your hair type, style, and everyday routine.</p>
+            <p>Everyday men’s haircuts shaped around your hair, your routine, and how much styling you actually want to do in the morning.</p>
           </article>
           <article class="service-card">
             <span class="service-icon">◒</span>
             <h3>Skin Fades</h3>
-            <p>Sharp blends, tight tapers, and crisp detail work for a fresh modern look.</p>
+            <p>Clean fades, tight tapers, and blended sides with detail work around the hairline, neckline, and sideburns.</p>
           </article>
           <article class="service-card">
             <span class="service-icon">▰</span>
             <h3>Beard Trims</h3>
-            <p>Shape, line, and clean up your beard so it matches your cut and face shape.</p>
+            <p>Lineups, shaping, and cleanup so your beard fits your face instead of looking like it’s freelancing.</p>
           </article>
           <article class="service-card">
             <span class="service-icon">—</span>
             <h3>Straight Razor Shaves</h3>
-            <p>A classic barbershop finish with clean lines, smooth edges, and premium attention.</p>
+            <p>A traditional barbershop shave or razor finish for clean edges, sharp lines, and that fresh-out-the-chair look.</p>
           </article>
           <article class="service-card">
             <span class="service-icon">★</span>
             <h3>Kids Cuts</h3>
-            <p>Friendly service for younger clients with patient barbers and a comfortable shop feel.</p>
+            <p>Patient, friendly cuts for younger clients. Good for families who want a local shop that does not make the appointment feel stressful.</p>
           </article>
           <article class="service-card">
             <span class="service-icon">◇</span>
             <h3>Classic Men’s Cuts</h3>
-            <p>Timeless styles, business cuts, scissor work, and clean everyday looks.</p>
+            <p>Side parts, scissor cuts, business cuts, gentleman’s cuts, and clean classic styles that age way better than random TikTok hair experiments.</p>
           </article>
           <article class="service-card service-card-wide">
             <span class="service-icon">✓</span>
-            <h3>Styling & Product Recommendations</h3>
-            <p>Get simple, practical product guidance so your cut still looks good after you leave the chair.</p>
+            <div>
+              <h3>Styling & Product Recommendations</h3>
+              <p>Not sure what product to use? Ask in the chair. The shop can recommend simple styling products and show you how to keep the cut looking sharp after you leave.</p>
+            </div>
           </article>
         </div>
 
         <div class="section-cta">
-          <p>Need a haircut today? Walk-ins are welcome.</p>
-          <a class="btn btn-primary" href="tel:+17606596603">Call the Shop</a>
+          <p>Need a cut today? Walk-ins are welcome, and booking ahead is easy.</p>
+          <div>
+            <a class="btn btn-primary" href="#booking" data-book-link>Book Now</a>
+            <a class="btn btn-dark" href="tel:+17606596603">Call the Shop</a>
+          </div>
         </div>
       </div>
     </section>
@@ -182,34 +191,34 @@
         <div class="why-copy">
           <p class="section-kicker">Why choose us</p>
           <h2>Why Vista Chooses Vista Barber Company</h2>
-          <p>Local, consistent, and easy to visit. Vista Barber Company is built for people who want a quality cut without overcomplicating the whole thing.</p>
+          <p>It’s not complicated. People come back because the cuts are consistent, the shop feels comfortable, and the location is easy to get to in Melrose Square.</p>
           <a class="btn btn-dark" href="#booking" data-book-link>Book Your Cut</a>
         </div>
 
         <div class="feature-list">
           <div>
             <h3>Experienced local barbers</h3>
-            <p>Personalized service from barbers who understand classic and modern styles.</p>
+            <p>Personalized service from barbers who handle classic styles, modern styles, fades, and beard work.</p>
           </div>
           <div>
             <h3>Clean fades and consistent cuts</h3>
-            <p>Sharp detail work, strong blends, and reliable results every visit.</p>
+            <p>Sharp detail work, clean blends, and reliable results whether it’s your first visit or your regular spot.</p>
           </div>
           <div>
-            <h3>Traditional barbershop atmosphere</h3>
-            <p>A comfortable, masculine, friendly shop with a real local feel.</p>
+            <h3>Comfortable barbershop atmosphere</h3>
+            <p>Friendly, traditional, and easy to walk into. Premium enough to feel sharp, local enough to feel normal.</p>
           </div>
           <div>
             <h3>Centrally located in Vista</h3>
-            <p>Easy to find inside Melrose Square with quick access from nearby North County areas.</p>
+            <p>Inside Melrose Square, serving Vista, Shadowridge, San Marcos, Carlsbad, La Costa, and North County San Diego.</p>
           </div>
           <div>
             <h3>Minimal wait times</h3>
-            <p>Great for busy schedules, quick cleanups, and same-day walk-ins.</p>
+            <p>Good for lunch-break trims, weekend cleanups, and last-minute “I need to look presentable” situations.</p>
           </div>
           <div>
-            <h3>Fair pricing for all ages</h3>
-            <p>Friendly service for men, kids, and anyone looking for a dependable local barber.</p>
+            <h3>Fair pricing and all ages</h3>
+            <p>A dependable shop for men’s cuts, kids cuts, beard trims, and regular maintenance.</p>
           </div>
         </div>
       </div>
@@ -219,7 +228,7 @@
       <div class="container">
         <div class="section-heading section-heading-light">
           <p class="section-kicker">Reviews</p>
-          <h2>Trusted by local Vista customers.</h2>
+          <h2>Local proof beats fancy promises.</h2>
           <p><span class="stars">★★★★★</span> 4.9 stars from 146+ Google reviews</p>
         </div>
 
@@ -251,37 +260,40 @@
     <section class="section" id="gallery">
       <div class="container">
         <div class="section-heading">
-          <p class="section-kicker">Gallery</p>
-          <h2>See the shop, the chairs, and the cuts.</h2>
-          <p>Use real photos of the exterior, inside of the barbershop, fade work, before-and-after cuts, and barber chair atmosphere to make the page feel local and trustworthy.</p>
+          <p class="section-kicker">Photos</p>
+          <h2>Actual shop energy. Actual cuts.</h2>
+          <p>Photos help visitors know they found a real local barber, not some random template site. These are pulled from Vista Barber Company’s public site/Instagram feed where available.</p>
         </div>
 
         <div class="gallery-grid">
-          <a class="gallery-item gallery-large" href="assets/gallery-1.jpg" aria-label="Exterior shop photo">
-            <img src="assets/gallery-1.jpg" onerror="this.onerror=null;this.src='assets/gallery-exterior.svg';" alt="Exterior of Vista Barber Company in Melrose Square" />
-            <span>Exterior / Outside Shop</span>
+          <a class="gallery-item gallery-large" href="assets/gallery-1.jpg" aria-label="Vista Barber Company haircut photo">
+            <img src="assets/gallery-1.jpg" alt="Client in the barber chair at Vista Barber Company" />
+            <span>Fresh cuts</span>
           </a>
-          <a class="gallery-item" href="assets/gallery-2.jpg" aria-label="Interior barbershop photo">
-            <img src="assets/gallery-2.jpg" onerror="this.onerror=null;this.src='assets/gallery-interior.svg';" alt="Interior of Vista Barber Company" />
-            <span>Interior</span>
+          <a class="gallery-item" href="assets/gallery-2.jpg" aria-label="Vista Barber Company interior photo">
+            <img src="assets/gallery-2.jpg" alt="Interior of Vista Barber Company with barber chairs" />
+            <span>The shop</span>
           </a>
-          <a class="gallery-item" href="assets/gallery-3.jpg" aria-label="Haircut and fade photo">
-            <img src="assets/gallery-3.jpg" onerror="this.onerror=null;this.src='assets/gallery-fade.svg';" alt="Clean fade haircut from Vista Barber Company" />
+          <a class="gallery-item" href="assets/gallery-3.jpg" aria-label="Fade haircut photo">
+            <img src="assets/gallery-3.jpg" alt="Clean fade haircut at Vista Barber Company" />
             <span>Fades</span>
           </a>
-          <a class="gallery-item" href="assets/gallery-4.jpg" aria-label="Before and after haircut photo">
-            <img src="assets/gallery-4.jpg" onerror="this.onerror=null;this.src='assets/gallery-before-after.svg';" alt="Before and after haircut result" />
-            <span>Before & After</span>
+          <a class="gallery-item" href="assets/gallery-4.jpg" aria-label="Before haircut photo">
+            <img src="assets/gallery-4.jpg" alt="Before haircut service at Vista Barber Company" />
+            <span>Before</span>
           </a>
-          <a class="gallery-item" href="assets/gallery-5.jpg" aria-label="Barber chair photo">
-            <img src="assets/gallery-5.jpg" onerror="this.onerror=null;this.src='assets/gallery-chair.svg';" alt="Barber chair and shop atmosphere" />
-            <span>Shop Atmosphere</span>
+          <a class="gallery-item" href="assets/gallery-5.jpg" aria-label="Classic cut photo">
+            <img src="assets/gallery-5.jpg" alt="Classic styled haircut at Vista Barber Company" />
+            <span>Classic cuts</span>
           </a>
         </div>
 
         <div class="section-cta">
-          <p>Like what you see? Come through Melrose Square.</p>
-          <a class="btn btn-dark" href="https://www.google.com/maps/dir/?api=1&destination=Vista%20Barber%20Company%201688%20S%20Melrose%20Dr%20%23210%20Vista%2C%20CA%2092081" target="_blank" rel="noopener">Get Directions</a>
+          <p>Like the vibe? Come through Melrose Square.</p>
+          <div>
+            <a class="btn btn-dark" href="https://www.google.com/maps/dir/?api=1&destination=Vista%20Barber%20Company%201688%20S%20Melrose%20Dr%20%23210%20Vista%2C%20CA%2092081" target="_blank" rel="noopener">Get Directions</a>
+            <a class="btn btn-primary" href="https://www.instagram.com/vistabarberco/" target="_blank" rel="noopener">See Instagram</a>
+          </div>
         </div>
       </div>
     </section>
@@ -321,10 +333,10 @@
         <div>
           <p class="section-kicker">Book or walk in</p>
           <h2>Ready for a Fresh Cut?</h2>
-          <p>Book your haircut, stop by as a walk-in, or call the shop today. Whether you need a clean fade, classic cut, beard trim, or kids haircut, Vista Barber Company has you covered.</p>
+          <p>Book your haircut, stop by as a walk-in, or call the shop today. Whether you need a clean fade, classic cut, beard trim, straight razor shave, or kids haircut, Vista Barber Company has you covered.</p>
         </div>
         <div class="booking-actions">
-          <a class="btn btn-primary btn-large" href="tel:+17606596603" data-book-link>Book Now</a>
+          <a class="btn btn-primary btn-large" href="#" data-book-link>Book Now</a>
           <a class="btn btn-light btn-large" href="tel:+17606596603">Call (760) 659-6603</a>
           <a class="btn btn-ghost-light btn-large" href="https://www.google.com/maps/dir/?api=1&destination=Vista%20Barber%20Company%201688%20S%20Melrose%20Dr%20%23210%20Vista%2C%20CA%2092081" target="_blank" rel="noopener">Get Directions</a>
         </div>
@@ -342,7 +354,7 @@
             <small>Professional barber shop in Vista, CA</small>
           </span>
         </a>
-        <p class="footer-seo">Professional barber shop in Vista, CA specializing in haircuts, fades, beard trims, and classic men’s grooming.</p>
+        <p class="footer-seo">Professional barber shop in Vista, CA specializing in haircuts, fades, beard trims, straight razor shaves, kids cuts, and classic men’s grooming.</p>
       </div>
 
       <div>
@@ -356,8 +368,8 @@
         <h3>Hours</h3>
         <p>Open 7 days</p>
         <p class="muted-small">Call the shop for current daily hours.</p>
-        <a class="footer-link" href="#booking" data-book-link>Book / Website</a>
-        <a class="footer-link" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a class="footer-link" href="#" data-book-link>Book appointment</a>
+        <a class="footer-link" href="https://www.instagram.com/vistabarberco/" target="_blank" rel="noopener">Instagram</a>
       </div>
 
       <div>
@@ -392,7 +404,7 @@
 
   <nav class="mobile-sticky" aria-label="Mobile quick actions">
     <a href="tel:+17606596603"><span>Call</span></a>
-    <a href="#booking" data-book-link><span>Book</span></a>
+    <a href="#" data-book-link><span>Book</span></a>
     <a href="https://www.google.com/maps/dir/?api=1&destination=Vista%20Barber%20Company%201688%20S%20Melrose%20Dr%20%23210%20Vista%2C%20CA%2092081" target="_blank" rel="noopener"><span>Directions</span></a>
   </nav>
 

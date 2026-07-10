@@ -1,6 +1,7 @@
 // Vista Barber Company static site helpers
-// Replace BOOKING_URL with the real booking link when available.
-const BOOKING_URL = "";
+// This is the Vista appointment link found from the current public site.
+// Replace it if the shop changes booking platforms.
+const BOOKING_URL = "https://app.acuityscheduling.com/schedule.php?owner=19633041";
 const FALLBACK_BOOKING_URL = "tel:+17606596603";
 
 const header = document.querySelector("[data-header]");
@@ -26,14 +27,4 @@ bookLinks.forEach((link) => {
     link.setAttribute("target", "_blank");
     link.setAttribute("rel", "noopener");
   }
-});
-
-// Small UX polish: make gallery preview images open in a new tab only if a real JPG exists.
-document.querySelectorAll(".gallery-item").forEach((item) => {
-  item.addEventListener("click", (event) => {
-    const img = item.querySelector("img");
-    if (!img || img.src.includes(".svg")) {
-      event.preventDefault();
-    }
-  });
 });
