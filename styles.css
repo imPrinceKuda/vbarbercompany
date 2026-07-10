@@ -110,6 +110,7 @@ h3 { font-size: 1.36rem; }
 .hero {
   min-height: 790px;
   position: relative;
+  isolation: isolate;
   display: grid;
   place-items: center;
   padding: calc(var(--header) + 70px) 0 95px;
@@ -118,20 +119,20 @@ h3 { font-size: 1.36rem; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  z-index: -2;
+  z-index: 0;
   background:
-    linear-gradient(90deg, rgba(5,5,5,.78), rgba(5,5,5,.36) 48%, rgba(5,5,5,.78)),
-    linear-gradient(0deg, rgba(5,5,5,.82), rgba(5,5,5,.1) 42%, rgba(5,5,5,.82)),
-    url("https://scontent-den2-1.cdninstagram.com/v/t51.82787-15/685406668_18171759823408845_9194775062694527569_n.jpg?_nc_cat=110&_nc_gid=7mTRu-JsDm1gfUN5oT6_vQ&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_oc=AdpnqzDBLFhBsRcHqyIFdcGouRykorFEvfvTG2qYhWSEHaRLIPQJGBEpmnhFHy1nsxk&_nc_ohc=UQlYPcMh5V0Q7kNvwFfOAS8&_nc_sid=18de74&_nc_tpa=Q5bMBQG5F9-12gyVvGW_84MfogoQqEXX7272m1aReSmu_Ei44k7Al3CmS6fuVoYfANiwU6jR_JNmuePv&_nc_zt=23&ccb=7-5&edm=ANo9K5cEAAAA&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&oe=6A561A70&oh=00_AQATaFKfIbUm-eNd80VvttuEo-EGG7EeyHNFZQosJV5Wzg&stp=dst-jpg_e35_tt6") center 36% / cover;
-  filter: saturate(1) contrast(1.04);
+    linear-gradient(90deg, rgba(5,5,5,.02), rgba(5,5,5,0) 46%, rgba(5,5,5,.02)),
+    linear-gradient(0deg, rgba(5,5,5,.04), rgba(5,5,5,0) 55%, rgba(5,5,5,.04)),
+    url("assets/hero-neck.jpg") center 43% / cover;
+  filter: saturate(1.14) contrast(1.06) brightness(1.35);
 }
 .hero-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(0,0,0,.04) 0 35%, rgba(0,0,0,.34) 76%);
+  background: radial-gradient(circle at center, rgba(0,0,0,0) 0 52%, rgba(0,0,0,.03) 90%);
 }
-.hero-inner { display: grid; justify-items: center; text-align: center; }
+.hero-inner { position: relative; z-index: 2; display: grid; justify-items: center; text-align: center; text-shadow: 0 5px 18px rgba(0,0,0,.94), 0 1px 0 rgba(0,0,0,.95); }
 .location-pill {
   margin-bottom: 28px;
   padding: 7px 18px;
@@ -177,13 +178,12 @@ h3 { font-size: 1.36rem; }
 .photo-strip { display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--line); background: #050505; }
 .insta-tile { position: relative; display: block; min-height: 320px; overflow: hidden; border-right: 1px solid var(--line); color: var(--white); }
 .insta-tile:last-child { border-right: 0; }
-.insta-tile img { width: 100%; height: 320px; object-fit: cover; display: block; filter: saturate(.96) contrast(1.04); transition: transform .28s ease, filter .28s ease; }
-.insta-tile::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.68); opacity: 0; transition: opacity .2s ease; }
-.insta-caption { position: absolute; z-index: 2; inset: auto 22px 22px 22px; color: var(--white); font-weight: 850; line-height: 1.45; text-shadow: 0 2px 14px rgba(0,0,0,.7); transform: translateY(12px); opacity: 0; transition: transform .22s ease, opacity .22s ease; }
-.insta-caption::before { content: "@vistabarberco"; display: block; margin-bottom: 8px; color: var(--orange); font-size: .72rem; text-transform: uppercase; letter-spacing: .2em; }
-.insta-tile:hover img, .insta-tile:focus-visible img { transform: scale(1.04); filter: saturate(.9) contrast(1.08); }
+.insta-tile img { width: 100%; height: 320px; object-fit: cover; display: block; filter: saturate(.98) contrast(1.04); transition: transform .28s ease, filter .28s ease; }
+.insta-tile::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.74); opacity: 0; transition: opacity .2s ease; }
+.insta-caption { position: absolute; z-index: 2; inset: 0; display: grid; place-items: center; padding: 28px; color: var(--white); font-weight: 950; line-height: 1.35; text-align: center; text-shadow: 0 2px 14px rgba(0,0,0,.9); opacity: 0; transform: scale(.96); transition: transform .22s ease, opacity .22s ease; pointer-events: none; }
+.insta-tile:hover img, .insta-tile:focus-visible img { transform: scale(1.04); filter: saturate(.88) contrast(1.08) brightness(.78); }
 .insta-tile:hover::after, .insta-tile:focus-visible::after { opacity: 1; }
-.insta-tile:hover .insta-caption, .insta-tile:focus-visible .insta-caption { opacity: 1; transform: translateY(0); }
+.insta-tile:hover .insta-caption, .insta-tile:focus-visible .insta-caption { opacity: 1; transform: scale(1); }
 
 .visit-section { background: #080706; }
 .location-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
@@ -263,8 +263,6 @@ h3 { font-size: 1.36rem; }
   .photo-strip { grid-template-columns: 1fr; }
   .insta-tile { min-height: 280px; border-right: 0; border-bottom: 1px solid var(--line); }
   .insta-tile img { height: 280px; }
-  .insta-tile::after, .insta-caption { opacity: 1; }
-  .insta-caption { transform: translateY(0); }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; }
   .modal-card { padding: 26px 18px; }
